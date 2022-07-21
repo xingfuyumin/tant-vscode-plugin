@@ -1,0 +1,79 @@
+{
+	"name": "tant-vscode-plugin",
+	"displayName": "数数最强插件",
+	"description": "数数科技最强vscode插件，你值得拥有！",
+	"version": "0.0.1",
+	"publisher": "数数花粉会",
+	"engines": {
+		"vscode": "^1.69.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"icon": "./huafenghui.png",
+	"capabilities": {
+		"hoverProvider": "true"
+	},
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "数数最强插件",
+			"properties": {
+				"数数最强插件.国际化语言包路径": {
+					"type": "string",
+					"default": "",
+					"description": "填写后可开启国际化代码自动补全和悬浮提示功能，填写样例：/Users/zhou/Desktop/gitlab/ta-multiverse/apps/portal/public/intl/。需要安装“TypeScript Importer”插件才能启动自动import功能"
+				},
+				"数数最强插件.开启图标预览功能": {
+					"type": "boolean",
+					"default": true,
+					"description": "配置后可开启图标悬浮预览功能，关闭再打开可以刷新图标库信息。需要安装“TypeScript Importer”插件才能启动自动import功能"
+				},
+				"数数最强插件.css样式包路径": {
+					"type": "string",
+					"default": "",
+					"description": "填写后可开启css样式集自动补全和悬浮提示功能，填写样例：/Users/zhou/Desktop/gitlab/ta-multiverse/node_modules/@tant/ui/lib/utils/variables.css"
+				}
+			}
+		}
+	},
+	"main": "./dist/extension.js",
+	"scripts": {
+		"vscode:prepublish": "npm run package",
+		"compile": "webpack",
+		"watch": "webpack --watch",
+		"package": "webpack --mode production --devtool hidden-source-map",
+		"compile-tests": "tsc -p . --outDir out",
+		"watch-tests": "tsc -p . -w --outDir out",
+		"pretest": "npm run compile-tests && npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.1.1",
+		"@types/node": "16.x",
+		"@types/superagent": "^4.1.15",
+		"@types/vscode": "^1.69.0",
+		"@typescript-eslint/eslint-plugin": "^5.30.0",
+		"@typescript-eslint/parser": "^5.30.0",
+		"@vscode/test-electron": "^2.1.5",
+		"eslint": "^8.18.0",
+		"glob": "^8.0.3",
+		"mocha": "^10.0.0",
+		"ts-loader": "^9.3.1",
+		"typescript": "^4.7.4",
+		"webpack": "^5.73.0",
+		"webpack-cli": "^4.10.0"
+	},
+	"dependencies": {
+		"-": "0.0.1",
+		"g": "^2.0.1",
+		"node-fetch": "^2.6.7",
+		"vsce": "^2.10.0",
+		"watch": "^1.0.2"
+	}
+}
