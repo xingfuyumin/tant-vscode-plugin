@@ -1,9 +1,9 @@
 {
 	"name": "tant-vscode-plugin",
 	"displayName": "数数最强插件",
-	"description": "数数科技最强vscode插件，你值得拥有！",
+	"description": "数数科技最强vscode插件，你值得拥有！此插件是专门给数数科技的花粉会成员打造的一款好用且方便的插件，涵盖国际化、图标、样式库等插件场景。其他无关用户请勿使用",
 	"version": "0.0.1",
-	"publisher": "数数花粉会",
+	"publisher": "thinkingdata-front",
 	"engines": {
 		"vscode": "^1.69.0"
 	},

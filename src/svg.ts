@@ -81,7 +81,7 @@ class SVG {
     fetch('https://api.figma.com/v1/files/WQTCgsKXiS4DfsDPtHGEpk/components', {
       method: 'GET',
       headers: {
-        'X-Figma-Token': 'figd_TE_0T-sC1sVcEFEzeUOONhwXDkTDKkwQEfp7pwdO',
+        'X-Figma-Token': 'figd_mQYHtpaYGreMdClMpY5Cb5eWXajh5MinaXrLARLv',
       },
     }).then((res: any) => {
       if (res?.status !== 200) {
