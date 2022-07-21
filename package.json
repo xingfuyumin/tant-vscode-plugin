@@ -10,7 +10,7 @@
 	"categories": [
 		"Other"
 	],
-	"icon": "./huafenghui.png",
+	"icon": "source/huafenghui.png",
 	"capabilities": {
 		"hoverProvider": "true"
 	},
